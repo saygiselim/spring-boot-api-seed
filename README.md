@@ -93,4 +93,4 @@ $ java -jar build/libs/spring-boot-api-seed-1.0.0-RELEASE.jar
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/saygiselim/spring-boot-api-seed/tags). 
