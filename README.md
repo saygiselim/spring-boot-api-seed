@@ -33,20 +33,20 @@ $ ./run.sh
 - examples above are given for `Linux/Unix` environment, for Windows use `.bat` versions of shell scripts
 
 #### Access to PostgreSQL Server
-* `localhost:5432`
+* **URL:** `localhost:5432`
 * **Username:** postgres
 * **Password:** password
 
 #### Access to PgAdmin
-* **URL:** `http://localhost:5050`
-* **Username:** default@email.com
-* **Password:** password
+* **URL:** http://localhost:5050
+* **Username:** `default@email.com`
+* **Password:** `password`
 
 #### Add a new server in PgAdmin:
 * **Host name/address:** `postgres`
 * **Port:** `5432`
-* **Username:** postgres
-* **Password:** password
+* **Username:** `postgres`
+* **Password:** `password`
 
 ## Run Test
 
