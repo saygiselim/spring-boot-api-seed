@@ -1,0 +1,84 @@
+name: common-YAML
+application:
+  title: Spring Boot API Seed
+  description: JWT based security implemented API starter project
+  jwt-secret: <toBeReplacedWithYourSecret>
+
+spring:
+  profiles:
+    active: development
+  main:
+    banner-mode: off
+  output:
+    ansi:
+      enabled: ALWAYS
+  jpa:
+    hibernate:
+      ddl-auto: update # Options: none, validate, update, create, and create-drop
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: false
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          time_zone: UTC
+  server:
+    address: 127.0.0.1
+    port: 8080
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework: WARN
+      hibernate: WARN
+
+---
+name: development-YAML
+environment: development
+spring:
+  profiles: development
+  main:
+    banner-mode: console
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sample?useSSL=false
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+
+---
+name: test-YAML
+environment: test
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: postgres
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+---
+name: staging-YAML
+environment: staging
+spring:
+  profiles: staging
+  datasource:
+    url: <toBeReplacedWithStagingDBUrl>
+    username: <toBeReplacedWithActualUsername>
+    password: <toBeReplacedWithActualPassword>
+    driverClassName: org.postgresql.Driver
+
+---
+name: production-YAML
+environment: production
+spring:
+  profiles: production
+  datasource:
+    url: <toBeReplacedWithProductionDBUrl>
+    username: <toBeReplacedWithActualUsername>
+    password: <toBeReplacedWithActualPassword>
+    driverClassName: org.postgresql.Driver
