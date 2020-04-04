@@ -4,7 +4,7 @@ JWT based security implemented API starter project
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -51,26 +51,26 @@ $ ./run.sh
 ## Run Test
 
 ```
-$ gradle test
+$ gradlew test
 ```
 
 ## Run Build
 
 with test
 ```
-$ gradle clean build
+$ gradlew clean build
 ```
 
 without test
 ```
-$ gradle bootJar
+$ gradlew bootJar
 ```
 
 ## Serve App on Apache Tomcat
 
 run
 ```
-$ gradle bootRun
+$ gradlew bootRun
 ```
 
 or, after running build command run
