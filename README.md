@@ -51,26 +51,26 @@ $ ./run.sh
 ## Run Test
 
 ```
-$ gradlew test
+$ ./gradlew test
 ```
 
 ## Run Build
 
 with test
 ```
-$ gradlew clean build
+$ ./gradlew clean build
 ```
 
 without test
 ```
-$ gradlew bootJar
+$ ./gradlew bootJar
 ```
 
 ## Serve App on Apache Tomcat
 
 run
 ```
-$ gradlew bootRun
+$ ./gradlew bootRun
 ```
 
 or, after running build command run
@@ -80,9 +80,9 @@ $ java -jar build/libs/spring-boot-api-seed-1.0.0-RELEASE.jar
 ```
 
 #### Access to API Resources
-* API - http://localhost:8080/api
-* Health Check - http://localhost:8080/actuator/health
-* Swagger API Documentation - http://localhost:8080/swagger-ui.html
+* API - http://localhost:8000/api
+* Health Check - http://localhost:8000/actuator/health
+* Swagger API Documentation - http://localhost:8000/swagger-ui.html
 
 ## Built With
 
