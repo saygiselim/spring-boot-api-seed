@@ -62,6 +62,8 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
 
 ---
 name: staging-YAML
@@ -82,3 +84,6 @@ spring:
     url: <toBeReplacedWithProductionDBUrl>
     username: <toBeReplacedWithActualUsername>
     password: <toBeReplacedWithActualPassword>
+  jpa:
+    hibernate:
+      ddl-auto: validate # for production always use validate and update schema manually to avoid accidental data loss
