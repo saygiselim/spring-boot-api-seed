@@ -1,17 +1,17 @@
 package com.saygiselim.springboot.seed.app.sample;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.time.Instant;
 
 @Entity
-@EnableAutoConfiguration
 @Table(name = "sample")
-public class Sample implements Serializable {
+public class Sample {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", nullable = false, updatable = false)
     private int id;
 
     @Column(name = "title", nullable = false, columnDefinition = "TEXT")
@@ -19,6 +19,14 @@ public class Sample implements Serializable {
 
     @Column(name = "content", nullable = false, columnDefinition = "TEXT")
     private String content;
+
+    @CreationTimestamp
+    @Column(name = "created_on")
+    private Instant createdOn;
+
+    @UpdateTimestamp
+    @Column(name = "updated_on")
+    private Instant updatedOn;
 
     public int getId() {
         return id;

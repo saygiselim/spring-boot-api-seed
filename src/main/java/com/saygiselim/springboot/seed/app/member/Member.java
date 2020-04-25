@@ -1,17 +1,17 @@
 package com.saygiselim.springboot.seed.app.member;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.time.Instant;
 
 @Entity
-@EnableAutoConfiguration
 @Table(name = "member", uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
-public class Member implements Serializable {
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", nullable = false, updatable = false)
     private int id;
 
     @Column(name = "name", nullable = false)
@@ -22,6 +22,14 @@ public class Member implements Serializable {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @CreationTimestamp
+    @Column(name = "created_on")
+    private Instant createdOn;
+
+    @UpdateTimestamp
+    @Column(name = "updated_on")
+    private Instant updatedOn;
 
     public int getId() {
         return id;
