@@ -47,7 +47,7 @@ public class SampleControllerTest {
         sampleDTO.setTitle("Sample Title");
         sampleDTO.setContent("Sample Content");
 
-        RequestBuilder requestBuilder = post("/api/samples")
+        RequestBuilder requestBuilder = post("/samples")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(sampleDTO));
 
@@ -64,7 +64,7 @@ public class SampleControllerTest {
         sampleDTO.setTitle("Sample Title");
         sampleDTO.setContent("Sample Content");
 
-        RequestBuilder requestBuilder = put("/api/samples/{id}", id)
+        RequestBuilder requestBuilder = put("/samples/{id}", id)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(sampleDTO));
 
@@ -77,7 +77,7 @@ public class SampleControllerTest {
     public void Should_Return_Samples_When_Get() throws Exception {
         when(sampleService.getSampleDTOs()).thenReturn(Arrays.asList(new SampleDTO(), new SampleDTO()));
 
-        RequestBuilder requestBuilder = get("/api/samples").contentType(MediaType.APPLICATION_JSON);
+        RequestBuilder requestBuilder = get("/samples").contentType(MediaType.APPLICATION_JSON);
 
         mockMvc
                 .perform(requestBuilder)
@@ -93,7 +93,7 @@ public class SampleControllerTest {
 
         when(sampleService.getSampleDTO(eq(id))).thenReturn(sampleDTO);
 
-        RequestBuilder requestBuilder = get("/api/samples/{id}", id).contentType(MediaType.APPLICATION_JSON);
+        RequestBuilder requestBuilder = get("/samples/{id}", id).contentType(MediaType.APPLICATION_JSON);
 
         mockMvc
                 .perform(requestBuilder)
@@ -105,7 +105,7 @@ public class SampleControllerTest {
     public void Should_Return_No_Content_When_Delete() throws Exception {
         int id = 1;
 
-        RequestBuilder requestBuilder = delete("/api/samples/{id}", id).contentType(MediaType.APPLICATION_JSON);
+        RequestBuilder requestBuilder = delete("/samples/{id}", id).contentType(MediaType.APPLICATION_JSON);
 
         mockMvc
                 .perform(requestBuilder)

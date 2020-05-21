@@ -36,7 +36,7 @@ public class MemberControllerTest {
 
         mockMvc
                 .perform(
-                        put("/api/members/{id}", id)
+                        put("/members/{id}", id)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(memberDTO))
                 )

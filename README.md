@@ -81,8 +81,8 @@ $ java -jar build/libs/spring-boot-api-seed-1.0.0-RELEASE.jar
 
 #### Access to API Resources
 * API - http://localhost:8000/api
-* Health Check - http://localhost:8000/actuator/health
-* Swagger API Documentation - http://localhost:8000/swagger-ui.html
+* Health Check - http://localhost:8000/api/actuator/health
+* Swagger API Documentation - http://localhost:8000/api/swagger-ui.html
 
 ## Built With
 

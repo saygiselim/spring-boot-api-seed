@@ -41,7 +41,7 @@ public class SwaggerConfig {
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
-                .paths(PathSelectors.ant("/api/**"))
+                .paths(PathSelectors.ant("/**"))
                 .build()
                 .securitySchemes(Collections.singletonList(getSecurityScheme()))
                 .securityContexts(Collections.singletonList(getSecurityContext()))

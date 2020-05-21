@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/members")
+@RequestMapping("/members")
 @Api("Member")
 public class MemberController {
     private final MemberService memberService;

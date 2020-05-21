@@ -35,7 +35,7 @@ public class AuthControllerTest {
 
         mockMvc
                 .perform(
-                        post("/api/auth/sign-up")
+                        post("/auth/sign-up")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(signUpInfoDTO))
                 )
