@@ -43,7 +43,7 @@ $ ./run.sh
 * **Password:** `password`
 
 #### Add a new server in PgAdmin:
-* **Host name/address:** `postgres`
+* **Host name/address:** `postgres-container`
 * **Port:** `5432`
 * **Username:** `postgres`
 * **Password:** `password`

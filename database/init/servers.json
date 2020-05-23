@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "postgres@container",
+      "Group": "Servers",
+      "Host": "postgres-container",
+      "Port": 5432,
+      "MaintenanceDB": "sample",
+      "Username": "postgres",
+      "SSLMode": "prefer"
+    }
+  }
+}

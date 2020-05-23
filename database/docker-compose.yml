@@ -1,8 +1,8 @@
-version: '3.7'
+version: '3.8'
 
 services:
   postgres:
-    container_name: postgres_container
+    container_name: postgres-container
     image: postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-sample}
@@ -10,31 +10,35 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
       PGDATA: /data/postgres
     volumes:
-      - postgres:/data/postgres
+      - postgres-volume:/data/postgres
+      - ./init/db.sql:/docker-entrypoint-initdb.d/db.sql
     ports:
       - "5432:5432"
     networks:
-      - postgres
+      - postgres-network
     restart: unless-stopped
 
   pgadmin:
-    container_name: pgadmin_container
+    container_name: pgadmin-container
     image: dpage/pgadmin4
+    depends_on:
+      - postgres
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-default@email.com}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-password}
     volumes:
-      - pgadmin:/root/.pgadmin
+      - pgadmin-volume:/root/.pgadmin
+      - ./init/servers.json:/pgadmin4/servers.json
     ports:
       - "${PGADMIN_PORT:-5050}:80"
     networks:
-      - postgres
+      - postgres-network
     restart: unless-stopped
 
 networks:
-  postgres:
+  postgres-network:
     driver: bridge
 
 volumes:
-  postgres:
-  pgadmin:
+  postgres-volume:
+  pgadmin-volume:
