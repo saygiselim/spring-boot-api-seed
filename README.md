@@ -1,10 +1,13 @@
 # Spring Boot API Seed
 
+[![Status](https://github.com/saygiselim/spring-boot-api-seed/workflows/tests/badge.svg)](https://github.com/saygiselim/spring-boot-api-seed/actions)
+
 JWT based security implemented API starter project
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing
+purposes.
 
 ### Prerequisites
 
