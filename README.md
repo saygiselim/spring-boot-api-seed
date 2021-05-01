@@ -1,6 +1,6 @@
 # Spring Boot API Seed
 
-[![Status](https://github.com/saygiselim/spring-boot-api-seed/workflows/tests/badge.svg)](https://github.com/saygiselim/spring-boot-api-seed/actions)
+[![Tests](https://github.com/saygiselim/spring-boot-api-seed/actions/workflows/gradle.yml/badge.svg?branch=master)](https://github.com/saygiselim/spring-boot-api-seed/actions/workflows/gradle.yml)
 
 JWT based security implemented API starter project
 
