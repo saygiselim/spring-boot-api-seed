@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import static java.util.Collections.emptyList;
 
 @Service
-public class JWTUserDetailsService implements UserDetailsService {
+final class JWTUserDetailsService implements UserDetailsService {
     private final MemberService memberService;
 
     @Autowired

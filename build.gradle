@@ -45,8 +45,9 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 
     // Test
-    implementation 'com.h2database:h2'
+    testImplementation 'junit:junit'
+    testImplementation 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
-    testImplementation 'junit:junit'
+    testImplementation 'org.mockito:mockito-inline'
 }

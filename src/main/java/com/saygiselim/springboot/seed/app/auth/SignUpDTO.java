@@ -4,7 +4,7 @@ import com.saygiselim.springboot.seed.app.member.Member;
 
 import javax.validation.constraints.NotBlank;
 
-public class SignUpDTO extends SignInDTO {
+public final class SignUpDTO extends SignInDTO {
     @NotBlank
     private String name;
 

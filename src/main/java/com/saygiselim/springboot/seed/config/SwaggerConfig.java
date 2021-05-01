@@ -23,7 +23,7 @@ import java.util.List;
 @Configuration
 @EnableSwagger2
 @Profile("!test")
-public class SwaggerConfig {
+class SwaggerConfig {
     private static final String[] SECURITY_WHITELIST = {
             // Authentication
             SecurityConstants.SIGN_UP_URL,

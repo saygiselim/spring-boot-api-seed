@@ -13,7 +13,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/members")
 @Api("Member")
-public class MemberController {
+final class MemberController {
     private final MemberService memberService;
 
     @Autowired

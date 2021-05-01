@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/samples")
 @Api("Sample")
-public class SampleController {
+final class SampleController {
     private final SampleService sampleService;
 
     @Autowired

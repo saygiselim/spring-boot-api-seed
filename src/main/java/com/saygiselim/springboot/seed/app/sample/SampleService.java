@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class SampleService {
+public final class SampleService {
     private final SampleRepository sampleRepository;
 
     @Autowired

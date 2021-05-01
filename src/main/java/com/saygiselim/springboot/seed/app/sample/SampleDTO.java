@@ -2,7 +2,7 @@ package com.saygiselim.springboot.seed.app.sample;
 
 import javax.validation.constraints.NotBlank;
 
-public class SampleDTO {
+public final class SampleDTO {
     private Integer id;
 
     @NotBlank

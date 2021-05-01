@@ -20,7 +20,7 @@ import java.time.Instant;
 import java.util.Collections;
 import java.util.Date;
 
-public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+final class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private final ApplicationProperties applicationProperties;
     private final AuthenticationManager authenticationManager;
 

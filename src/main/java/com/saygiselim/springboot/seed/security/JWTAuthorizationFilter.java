@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Collections;
 
-public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
+final class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     private final JWTVerifier jwtVerifier;
 
     public JWTAuthorizationFilter(ApplicationProperties applicationProperties, AuthenticationManager authManager) {

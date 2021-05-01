@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AuthService {
+public final class AuthService {
     private final MemberService memberService;
 
     @Autowired

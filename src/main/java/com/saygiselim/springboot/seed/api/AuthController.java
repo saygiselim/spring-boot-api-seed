@@ -13,7 +13,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/auth")
 @Api("Auth")
-public class AuthController {
+final class AuthController {
     private final AuthService authService;
 
     @Autowired

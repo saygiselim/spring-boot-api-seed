@@ -2,7 +2,7 @@ package com.saygiselim.springboot.seed.app.member;
 
 import javax.validation.constraints.NotBlank;
 
-public class MemberDTO {
+public final class MemberDTO {
     @NotBlank
     private String name;
 
