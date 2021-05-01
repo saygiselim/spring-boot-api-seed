@@ -11,7 +11,6 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres-volume:/data/postgres
-      - ./init/db.sql:/docker-entrypoint-initdb.d/db.sql
     ports:
       - "5432:5432"
     networks:
@@ -28,7 +27,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-password}
     volumes:
       - pgadmin-volume:/root/.pgadmin
-      - ./init/servers.json:/pgadmin4/servers.json
+      - ./servers.json:/pgadmin4/servers.json
     ports:
       - "${PGADMIN_PORT:-5050}:80"
     networks:
