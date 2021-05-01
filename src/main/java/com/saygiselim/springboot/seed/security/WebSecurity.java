@@ -74,13 +74,13 @@ class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
-        final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        var source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
         return source;
     }
 
     private JWTAuthenticationFilter getJWTAuthenticationFilter() throws Exception {
-        final JWTAuthenticationFilter filter = new JWTAuthenticationFilter(applicationProperties, authenticationManager());
+        var filter = new JWTAuthenticationFilter(applicationProperties, authenticationManager());
         filter.setFilterProcessesUrl(SecurityConstants.SIGN_IN_URL);
         return filter;
     }

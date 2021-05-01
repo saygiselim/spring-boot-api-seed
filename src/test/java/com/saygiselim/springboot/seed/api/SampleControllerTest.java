@@ -20,7 +20,6 @@ import java.util.Arrays;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -91,7 +90,7 @@ public class SampleControllerTest {
         SampleDTO sampleDTO = new SampleDTO();
         sampleDTO.setId(id);
 
-        when(sampleService.getSampleDTO(eq(id))).thenReturn(sampleDTO);
+        when(sampleService.getSampleDTO(id)).thenReturn(sampleDTO);
 
         RequestBuilder requestBuilder = get("/samples/{id}", id).contentType(MediaType.APPLICATION_JSON);
 

@@ -13,7 +13,7 @@ public final class AuthService {
     public AuthService(MemberService memberService) {this.memberService = memberService;}
 
     public void signUp(SignUpDTO signUpInfoDTO) {
-        Member member = new Member();
+        var member = new Member();
         member.setName(signUpInfoDTO.getName());
         member.setEmail(signUpInfoDTO.getEmail());
         member.setPassword(signUpInfoDTO.getPassword());

@@ -32,7 +32,7 @@ final class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req, HttpServletResponse res) {
         try {
-            SignInDTO signInDTO = new ObjectMapper().readValue(req.getInputStream(), SignInDTO.class);
+            var signInDTO = new ObjectMapper().readValue(req.getInputStream(), SignInDTO.class);
             Authentication authentication = new UsernamePasswordAuthenticationToken(signInDTO.getEmail(), signInDTO.getPassword(), Collections.emptyList());
             return authenticationManager.authenticate(authentication);
         } catch (IOException e) {

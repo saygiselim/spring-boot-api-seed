@@ -36,7 +36,7 @@ public final class SampleDTO {
     }
 
     public static SampleDTO fromSample(Sample sample) {
-        SampleDTO sampleDTO = new SampleDTO();
+        var sampleDTO = new SampleDTO();
         sampleDTO.setId(sample.getId());
         sampleDTO.setTitle(sample.getTitle());
         sampleDTO.setContent(sample.getContent());
@@ -45,7 +45,7 @@ public final class SampleDTO {
     }
 
     public Sample toSample() {
-        Sample sample = new Sample();
+        var sample = new Sample();
         if (id != null) {
             sample.setId(id);
         }

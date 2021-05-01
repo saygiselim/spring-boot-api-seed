@@ -21,7 +21,7 @@ public final class SampleService {
     }
 
     public void updateSample(int id, SampleDTO sampleDTO) {
-        Sample sample = getSample(id);
+        var sample = getSample(id);
         sample.setTitle(sampleDTO.getTitle());
         sample.setContent(sampleDTO.getContent());
 

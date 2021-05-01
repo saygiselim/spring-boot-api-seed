@@ -17,7 +17,7 @@ public final class SignUpDTO extends SignInDTO {
     }
 
     public Member toMember() {
-        Member member = new Member();
+        var member = new Member();
         member.setName(name);
         member.setEmail(email);
         member.setPassword(password);

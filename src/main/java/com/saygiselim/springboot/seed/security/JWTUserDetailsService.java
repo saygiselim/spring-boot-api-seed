@@ -1,6 +1,5 @@
 package com.saygiselim.springboot.seed.security;
 
-import com.saygiselim.springboot.seed.app.member.Member;
 import com.saygiselim.springboot.seed.app.member.MemberService;
 import com.saygiselim.springboot.seed.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ final class JWTUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) {
         try {
-            Member member = memberService.getMember(username);
+            var member = memberService.getMember(username);
             return new User(member.getEmail(), member.getPassword(), emptyList());
         } catch (ResourceNotFoundException ex) {
             throw new UsernameNotFoundException(username);

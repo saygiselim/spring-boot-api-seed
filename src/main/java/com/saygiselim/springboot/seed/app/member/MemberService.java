@@ -30,7 +30,7 @@ public final class MemberService {
     }
 
     public void updateMember(int id, MemberDTO memberDTO) {
-        Member member = getMember(id);
+        var member = getMember(id);
         member.setName(memberDTO.getName());
 
         memberRepository.save(member);
