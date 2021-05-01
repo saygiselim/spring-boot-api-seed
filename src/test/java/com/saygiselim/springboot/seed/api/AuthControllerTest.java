@@ -27,7 +27,7 @@ public class AuthControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
-    public void Should_Return_Created_When_Sign_Up() throws Exception {
+    public void Should_ReturnCreatedWhen_SignUp() throws Exception {
         SignUpDTO signUpInfoDTO = new SignUpDTO();
         signUpInfoDTO.setName("TestUser");
         signUpInfoDTO.setEmail("test@email.com");

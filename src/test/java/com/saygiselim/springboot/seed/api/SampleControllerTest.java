@@ -42,7 +42,7 @@ public class SampleControllerTest {
     private SampleService sampleService;
 
     @Test
-    public void Should_Return_Created_When_Post() throws Exception {
+    public void Should_ReturnCreated_When_Post() throws Exception {
         SampleDTO sampleDTO = new SampleDTO();
         sampleDTO.setTitle("Sample Title");
         sampleDTO.setContent("Sample Content");
@@ -57,7 +57,7 @@ public class SampleControllerTest {
     }
 
     @Test
-    public void Should_Return_No_Content_When_Put() throws Exception {
+    public void Should_ReturnNoContent_When_Put() throws Exception {
         int id = 1;
         SampleDTO sampleDTO = new SampleDTO();
         sampleDTO.setId(id);
@@ -74,7 +74,7 @@ public class SampleControllerTest {
     }
 
     @Test
-    public void Should_Return_Samples_When_Get() throws Exception {
+    public void Should_ReturnSamplesWhen_Get() throws Exception {
         when(sampleService.getSampleDTOs()).thenReturn(Arrays.asList(new SampleDTO(), new SampleDTO()));
 
         RequestBuilder requestBuilder = get("/samples").contentType(MediaType.APPLICATION_JSON);
@@ -86,7 +86,7 @@ public class SampleControllerTest {
     }
 
     @Test
-    public void Should_Return_Sample_When_Get() throws Exception {
+    public void Should_ReturnSampleWhen_Get() throws Exception {
         int id = 1;
         SampleDTO sampleDTO = new SampleDTO();
         sampleDTO.setId(id);
@@ -102,7 +102,7 @@ public class SampleControllerTest {
     }
 
     @Test
-    public void Should_Return_No_Content_When_Delete() throws Exception {
+    public void Should_ReturnNoContent_When_Delete() throws Exception {
         int id = 1;
 
         RequestBuilder requestBuilder = delete("/samples/{id}", id).contentType(MediaType.APPLICATION_JSON);

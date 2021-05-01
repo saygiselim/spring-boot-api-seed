@@ -29,7 +29,7 @@ public class MemberControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
-    public void Should_Return_No_Content_When_Update_Member() throws Exception {
+    public void Should_ReturnNoContent_When_UpdateMember() throws Exception {
         int id = 1;
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setName("TestUser");

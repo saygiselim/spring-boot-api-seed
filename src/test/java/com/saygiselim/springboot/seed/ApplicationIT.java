@@ -18,7 +18,7 @@ public class ApplicationIT {
     ApplicationContext applicationContext;
 
     @Test
-    public void Application_Should_Load_Context_When_Started() {
+    public void Should_LoadContext_When_Started() {
         assertThat(applicationContext.getId()).isEqualTo("application");
     }
 }
